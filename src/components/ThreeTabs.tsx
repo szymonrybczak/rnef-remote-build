@@ -24,15 +24,16 @@ const SettingsScreen = () => (
 
 const ThreeTabs = () => {
   return (
-    <Tab.Navigator
-      screenOptions={() => ({
-        tabBarActiveTintColor: '#007AFF',
-        tabBarInactiveTintColor: 'gray',
-      })}
-    >
-      <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Profile" component={ProfileScreen} />
-      <Tab.Screen name="Settings" component={SettingsScreen} />
+    <Tab.Navigator>
+      <Tab.Screen name="Home" component={HomeScreen} options={{
+        tabBarIcon: () => ({ sfSymbol: 'house' }),
+      }} />
+      <Tab.Screen name="Profile" component={ProfileScreen} options={{
+        tabBarIcon: () => ({ sfSymbol: 'person' }),
+      }} />
+      <Tab.Screen name="Settings" component={SettingsScreen} options={{
+        tabBarIcon: () => ({ sfSymbol: 'gear' }),
+      }} />
     </Tab.Navigator>
   );
 };
