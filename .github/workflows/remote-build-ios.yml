@@ -63,5 +63,5 @@ jobs:
         with:
           destination: simulator
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          scheme: SCHEME_FOR_SIMULATORS # replace with preferred scheme
+          scheme: rnefapp # replace with preferred scheme
           configuration: Debug # replace with preferred configuration
